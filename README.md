@@ -33,7 +33,7 @@ Bouton déconnexion rouge en bas
 
 # Installation
   - Clone le projet :
-git clone https://github.com/ton-utilisateur/libri.git
+git clone https://github.com/AnisAb2002/libri.git
 cd libri
   - Installe les dépendances Flutter :
 flutter pub get
