@@ -1,4 +1,4 @@
-#Libri
+# Libri
 
 Application mobile avec Flutter permettant de gérer les lectures où on peut :
   - Ajouter les livres que tu as déjà lus
@@ -7,7 +7,7 @@ Application mobile avec Flutter permettant de gérer les lectures où on peut :
   - Créer un compte utilisateur avec Firebase Auth
   - Sauvegarder les données de chaque utilisateur dans Firestore
 
-#Fonctionnalités 
+# Fonctionnalités 
 Gestion des livres lus :
   - Titre, auteur, description et note.
   - Liste en temps réel avec possibilité de supprimer un livre
@@ -24,14 +24,14 @@ Accueil avec titre centré
 Boutons larges et colorés pour les listes
 Bouton déconnexion rouge en bas
 
-#Technologies utilisées
+# Technologies utilisées
   - Flutter : développement multiplateforme Android & iOS
   - Firebase : Auth, Firestore, Storage
   - Dart : langage principal
   - firebase_auth, cloud_firestore
   - flutter_launcher_icons pour l’icône de l’application
 
-#Installation
+# Installation
   - Clone le projet :
 git clone https://github.com/ton-utilisateur/libri.git
 cd libri
@@ -47,18 +47,6 @@ Build APK
   - Pour générer un APK debug :
 flutter build apk --debug
 
-
-# Structure du projet
-lib/
- ├─ main.dart             # Point d'entrée
- ├─ screens/
- │   ├─ auth/             # Connexion / Inscription
- │   ├─ lus/              # Livres lus
- │   └─ alire/            # Wishlist
- ├─ models/               # Modèles de données (Livre, ReadBook)
- └─ services/             # FirestoreService pour la DB
-icon/
- └─ lib_icon.png              # Icône de l'application
 
 #Auteur
 Anis – Étudiant en informatique
