@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "682747425572",
+    "project_id": "libri-7fabd",
+    "storage_bucket": "libri-7fabd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682747425572:android:779ed48da2a075997779b1",
+        "android_client_info": {
+          "package_name": "com.anis.libri"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB4ivqviR4Go8EG2T4XjuymzHzC1kejmU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:682747425572:android:fd6c348adf52d4657779b1",
+        "android_client_info": {
+          "package_name": "com.example.libri"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCB4ivqviR4Go8EG2T4XjuymzHzC1kejmU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
