@@ -36,14 +36,29 @@ class ReadBooksScreen extends StatelessWidget {
           itemCount: books.length,
           itemBuilder: (_, i) {
             final b = books[i];
+            
             return Dismissible(
               key: Key(b.id),
-              onDismissed: (_) => FirestoreService().deleteReadBook(b.id),
+              direction: DismissDirection.endToStart, // swipe vers la gauche pour supprimer
+              onDismissed: (_) async {
+                await FirestoreService().deleteReadBook(b.id);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text("Livre supprimé")),
+                );
+              },
+              background: Container(
+                color: Colors.red,
+                alignment: Alignment.centerRight,
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: const Icon(Icons.delete, color: Colors.white),
+              ),
               child: ListTile(
                 title: Text(b.title),
                 subtitle: Text("${b.author} ⭐ ${b.rating}"),
               ),
             );
+
+
           },
         );
 

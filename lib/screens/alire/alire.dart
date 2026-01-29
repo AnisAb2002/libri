@@ -34,15 +34,29 @@ class WishlistScreen extends StatelessWidget {
             itemCount: books.length,
             itemBuilder: (_, i) {
               final b = books[i];
+              
               return Dismissible(
                 key: Key(b.id),
-                onDismissed: (_) =>
-                    FirestoreService().deleteWishlistBook(b.id),
+                direction: DismissDirection.endToStart,
+                onDismissed: (_) async {
+                  await FirestoreService().deleteWishlistBook(b.id);
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text("Livre supprimé de la wishlist")),
+                  );
+                },
+                background: Container(
+                  color: Colors.red,
+                  alignment: Alignment.centerRight,
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: const Icon(Icons.delete, color: Colors.white),
+                ),
                 child: ListTile(
                   title: Text(b.title),
                   subtitle: Text(b.author),
                 ),
               );
+
+
             },
           );
         },
